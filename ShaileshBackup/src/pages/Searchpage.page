@@ -1,0 +1,13 @@
+<apex:page controller="SearchPage" showHeader="false">
+    <apex:form >
+        <apex:pageBlock >
+            <Apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:inputText label="Search" id="sarchId"/>
+                    <apex:commandButton value="Search"/>
+                </apex:pageBlockSectionItem>
+            </Apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>    
+    
+</apex:page>

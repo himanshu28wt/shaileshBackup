@@ -1,0 +1,22 @@
+<apex:page standardController="Account" extensions="Accountsj">
+
+ <apex:form >
+  <apex:pageBlock >  
+ 
+   <apex:selectlist value="{!ratings}" size="1">
+    <apex:selectOptions value="{!options}"/>
+    <apex:actionSupport event="onchange" action="{!SelectContact}" reRender="pgId"/>
+   </apex:selectlist>
+ 
+  
+  <apex:outputPanel id="pgId"> 
+  <apex:pageBlockTable value="{!listoFContact}" var="lts"> 
+  <apex:column value="{!lts.id}"/>
+  <apex:column value="{!lts.Rating__c}"/>
+ 
+  </apex:pageBlockTable> 
+  </apex:outputPanel>
+
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

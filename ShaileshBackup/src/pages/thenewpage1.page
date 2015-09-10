@@ -1,0 +1,25 @@
+<apex:page showHeader="false" standardController="Account">
+  <b> hello {!$User.FirstName&' '&$User.LastName}!</b>
+  <p>You are viewing the {! account.name} account.</p>
+  <p>here comes the accounts industry : {!account.industry} </p>
+  <apex:outputLink value="http://developer.force.com/">Click me!</apex:outputLink>
+  <br></br>
+<apex:pageBlock title="Custom Output">
+<apex:outputLink value="http://developer.force.com/">Click me!</apex:outputLink>
+
+
+<apex:pageBlockSection title="Custom Section Title">
+<apex:outputField value="{!account.Name}"/>
+<apex:outputField value="{!account.Owner.Name}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+<apex:pageBlock title="new table">
+<apex:pageBlockTable value="{!account.contacts}" var="item">
+<apex:column value="{!item.name}"/>
+ 
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+ 
+ <apex:detail relatedList="false"/>
+</apex:page>

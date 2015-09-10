@@ -1,0 +1,29 @@
+<apex:page controller="students">
+<apex:form >
+ <apex:pageBlock >
+   <apex:pageBlockSection >
+   <apex:pageBlockSectionItem >
+   Rollno:<apex:inputText value="{!Rollno}" />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   Name:<apex:inputText value="{!Name}" />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+   
+   marks:<apex:inputText value="{!Marks}" />
+   </apex:pageBlockSectionItem>
+   <apex:pageBlockSectionItem >
+      result:<apex:commandButton value="result" action="{!calcResult}"/>  
+   </apex:pageBlockSectionItem>
+   
+   <apex:pageBlockSectionItem >
+   result:<apex:outputText value="{!result}"/>
+   
+   </apex:pageBlockSectionItem>
+   </apex:pageBlockSection>
+ 
+ </apex:pageBlock>
+ 
+ </apex:form>
+ 
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page controller="AccountList" showHeader="false">
+  
+  <apex:form >
+  
+  
+  <apex:selectList value="{!Accountname}" multiselect="false" size="1">
+            <apex:selectOptions value="{!AccountData}"/>
+            
+     </apex:selectList><p/>
+        
+         <apex:commandButton value="show" action="{!show}"/>
+        <apex:detail subject="{!Accountname}" relatedList="true"/>
+  </apex:form>
+  
+  
+  
+</apex:page>

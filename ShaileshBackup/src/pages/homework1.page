@@ -1,0 +1,12 @@
+<apex:page showheader="true" standardController="contact">
+<apex:form >
+<apex:pageBlock title="Quick edit:{!Contact.Name}">
+<apex:pageBlockSection title="contact detail" columns="1">
+<apex:inputField value="{!Contact.phone}"/>
+<apex:inputtext value="{!contact.email}"/>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+ 
+</apex:page>

@@ -1,0 +1,36 @@
+<apex:page showHeader="false" standardController="Account">
+
+<apex:pageBlock title="Page Block-1">
+
+
+<apex:pageBlockTable value="{!account.Contacts}" var="MyVar">
+  <apex:column value="{!MyVar.Name}"/>
+  <apex:column value="{!MyVar.Phone}"/>
+  </apex:pageBlockTable>
+  
+<apex:pageBlockSection title="Page Block Section-1">
+
+on two
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Page Block Section-2">
+three four
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons location="both">
+<apex:form >
+
+<apex:commandButton action="{!cancel}" value="cancel"/>
+<apex:commandButton action="{!save}" value="submit"/>
+
+<apex:commandButton action="{!edit}" value="Edit"/>
+</apex:form>
+
+</apex:pageBlockButtons>
+<apex:form >
+<apex:inputField value="{!account.name}"/>
+</apex:form>
+</apex:pageBlock>
+<apex:detail relatedList="false"/>
+  </apex:page>
